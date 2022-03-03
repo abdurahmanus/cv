@@ -2,8 +2,6 @@
 layout: default
 ---
 
-## Dmitry Gladkikh
-### Front-End Developer
-
+## Front-End Developer
 
 # CV Example
