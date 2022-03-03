@@ -2,6 +2,4 @@
 layout: default
 ---
 
-## Front-End Developer
-
-# CV Example
+## CV Example
