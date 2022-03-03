@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 ## Dmitry Gladkikh
 ### Front-End Developer
 
