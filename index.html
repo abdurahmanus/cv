@@ -4,15 +4,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dmitry Gladkikh - Front-End Developer</title>
+    <title>Dmitry Gladkikh - Front-end Developer</title>
     
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Ubuntu&display=swap");
+      @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;500&family=Ubuntu:wght@400;700&display=swap');
 
 :root {
   --font-header: "Fredoka", sans-serif;
   --font-body: "Ubuntu", sans-serif;
   --body-padding: 32px;
+  --header-color: hsl(95deg 81% 47%);
+  --accent-color: hsl(213deg 68% 57%);
 }
 
 * {
@@ -60,14 +62,9 @@ body {
 
 @supports (backdrop-filter: blur(0px)) {
   .avatar figure {
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(6px);
     background-color: transparent;
   }
-}
-
-.avatar figcaption {
-  font-size: 1.3rem;
-  font-family: var(--font-header);
 }
 
 .avatar img {
@@ -75,6 +72,22 @@ body {
   border: 6px solid white;
   width: 200px;
   height: 200px;
+}
+
+.avatar figcaption {
+  font-size: 1.3rem;
+  font-family: var(--font-header);
+  color: white;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar figcaption .job_title {
+  font-size: 1rem;
+  color: var(--header-color);
 }
 
 section {
@@ -87,6 +100,7 @@ h1 {
   padding: 32px 0;
   font-size: 3rem;
   font-family: var(--font-header);
+  color: var(--header-color);
 }
 
 p {
@@ -95,22 +109,29 @@ p {
   text-align: justify;
 }
 
+strong {
+  color: var(--accent-color);
+}
+
     </style>
   </head>
   <body>
     <header class="intro">
       <div class="avatar">
         <figure>
-          <picture><source type="image/avif" srcset="img/Fsu9sRhGu8-300.avif 300w" sizes="(min-width: 30em) 50vw, 100vw"><img alt="Dmitry Gladkikh" loading="lazy" decoding="async" class="" src="img/Fsu9sRhGu8-300.jpeg" width="300" height="299"></picture>
-          <figcaption>Dmitry Gladkikh</figcaption>
+          <picture><source type="image/avif" srcset="img/Fsu9sRhGu8-300.avif 300w" sizes="(min-width: 30em) 50vw, 100vw"><img alt="avatar" loading="lazy" decoding="async" class="" src="img/Fsu9sRhGu8-300.jpeg" width="300" height="299"></picture>
+          <figcaption>
+            <div>Dmitry Gladkikh</div>
+            <div class="job_title">Front-end Developer</div>
+          </figcaption>
         </figure>
       </div>
     </header>
     <section>
 <h1>About</h1>
-<p>I am an experienced front-end developer who enjoys building modern UI using the latest in web technologies. I frequently leverage the React and Redux ecosystems (@redux-toolkit). I love styled-components, xstyled, tailwindcss.</p>
-<p>Currently, I work at Kaspersky Lab on the Infrastructure Solutions &amp; Services Development team.</p>
-<p>I started my journey in Computer Science at the Russian Universilty of Transport (MIIT) in Moscow. The first programming languages that I learned were Turbo Pascal and Assembler. After graduation, I started working for a small company that created training programs for train drivers. We've used various technologies: Adobe Flash, Ogre3D, VR (when it first came into being). Next I started exploring .NET technologies such as ASP.NET, Windows Forms, WPF, SQL Server, etc. I worked as a back-end developer for several years. Then I started to get interested in the front-end. At that time, the popular framework angular.js appeared, which blew everyone's minds. I decided to become a full-fledged front-end developer. Then came React. Since then it has been my go-to tool.</p>
+<p>I am an experienced front-end developer who enjoys building modern UI using the latest in web technologies. I frequently leverage the <strong>React</strong> and <strong>Redux</strong> ecosystems (<strong>@redux-toolkit</strong>). I love <strong>styled-components</strong>, <strong>xstyled</strong>, <strong>tailwindcss</strong>.</p>
+<p>Currently, I work at <strong>Kaspersky Lab</strong> on the Infrastructure Solutions &amp; Services Development team.</p>
+<p>I started my journey in Computer Science at the Russian Universilty of Transport (MIIT) in Moscow. The first programming languages that I learned were <strong>Turbo Pascal</strong> and <strong>Assembler</strong>. After graduation, I started working for a small company that created training programs for train drivers. We've used various technologies: <strong>Adobe Flash</strong>, <strong>Ogre3D</strong>, <strong>VR</strong> (when it first came into being). Next I started exploring .NET technologies such as <strong>ASP.NET</strong>, <strong>Windows Forms</strong>, <strong>WPF</strong>, <strong>SQL Server</strong>, etc. I worked as a back-end developer for several years. Then I started to get interested in the front-end. At that time, the popular framework <strong>angular.js</strong> appeared, which blew everyone's minds. I decided to become a full-fledged front-end developer. Then came <strong>React</strong>. Since then it has been my go-to tool.</p>
 <p>When I'm not working, I do my best to raise my son. I enjoy traveling and trying my hand at photography.</p>
 </section>
   </body>
