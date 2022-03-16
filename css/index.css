@@ -3,3 +3,12 @@ body {
   background: hsl(280deg 70% 13%);
   color: hsl(44deg 41% 80%);
 }
+
+/* TODO: add class to background image*/
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
