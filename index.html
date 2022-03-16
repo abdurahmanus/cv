@@ -7,11 +7,12 @@
     <title>Dmitry Gladkikh - Front-End Developer</title>
     
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Ubuntu&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Ubuntu&display=swap");
 
 :root {
-  --font-header: 'Fredoka', sans-serif;
+  --font-header: "Fredoka", sans-serif;
   --font-body: "Ubuntu", sans-serif;
+  --body-padding: 32px;
 }
 
 * {
@@ -25,6 +26,7 @@ body {
   background: hsl(233deg 85% 4%);
   color: hsl(0, 0%, 94%);
   font-size: 16px;
+  padding: 0 var(--body-padding);
 }
 
 .intro {
@@ -36,13 +38,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 calc(var(--body-padding) * -1);
 }
 
-.intro { background-image: url(img/wyb7qIwSPZ-600.jpeg);} @media (min-width: 600px) { .intro {background-image: url(img/wyb7qIwSPZ-800.jpeg);}}@media (min-width: 800px) { .intro {background-image: url(img/wyb7qIwSPZ-900.jpeg);}}@media (min-width: 900px) { .intro {background-image: url(img/wyb7qIwSPZ-1100.jpeg);}}@media (min-width: 1100px) { .intro {background-image: url(img/wyb7qIwSPZ-1500.jpeg);}}@media (min-width: 1500px) { .intro {background-image: url(img/wyb7qIwSPZ-2000.jpeg);}}
+.intro { background-image: url(img/wyb7qIwSPZ-800.jpeg);} @media (min-width: 800px) { .intro {background-image: url(img/wyb7qIwSPZ-1200.jpeg);}}@media (min-width: 1200px) { .intro {background-image: url(img/wyb7qIwSPZ-2000.jpeg);}}
 
 .avatar {
   overflow: hidden;
-  border-radius: 16px
+  border-radius: 24px;
+  border: 1px dashed hsl(0deg 0% 100% / 20%);
 }
 
 .avatar figure {
@@ -50,8 +54,15 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  backdrop-filter: blur(3px);
+  background-color: hsla(259.3, 70%, 7.8%, 0.84);
   padding: 32px;
+}
+
+@supports (backdrop-filter: blur(0px)) {
+  .avatar figure {
+    backdrop-filter: blur(3px);
+    background-color: transparent;
+  }
 }
 
 .avatar figcaption {
@@ -63,7 +74,7 @@ body {
   border-radius: 50%;
   border: 6px solid white;
   width: 200px;
-  height: 200px
+  height: 200px;
 }
 
 section {
@@ -80,7 +91,10 @@ h1 {
 
 p {
   margin: 24px 0;
+  text-indent: 24px;
+  text-align: justify;
 }
+
     </style>
   </head>
   <body>
@@ -96,6 +110,8 @@ p {
 <h1>About</h1>
 <p>I am an experienced front-end developer who enjoys building modern UI using the latest in web technologies. I frequently leverage the React and Redux ecosystems (@redux-toolkit). I love styled-components, xstyled, tailwindcss.</p>
 <p>Currently, I work at Kaspersky Lab on the Infrastructure Solutions &amp; Services Development team.</p>
+<p>I started my journey in Computer Science at the Russian Universilty of Transport (MIIT) in Moscow. The first programming languages that I learned were Turbo Pascal and Assembler. After graduation, I started working for a small company that created training programs for train drivers. We've used various technologies: Adobe Flash, Ogre3D, VR (when it first came into being). Next I started exploring .NET technologies such as ASP.NET, Windows Forms, WPF, SQL Server, etc. I worked as a back-end developer for several years. Then I started to get interested in the front-end. At that time, the popular framework angular.js appeared, which blew everyone's minds. I decided to become a full-fledged front-end developer. Then came React. Since then it has been my go-to tool.</p>
+<p>When I'm not working, I do my best to raise my son. I enjoy traveling and trying my hand at photography.</p>
 </section>
   </body>
 </html>
