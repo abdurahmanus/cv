@@ -5,16 +5,97 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dmitry Gladkikh - Front-End Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
+    
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Ubuntu&display=swap');
+
+:root {
+  --font-header: 'Fredoka', sans-serif;
+  --font-body: "Ubuntu", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: hsl(233deg 85% 4%);
+  color: hsl(0, 0%, 94%);
+  font-size: 16px;
+}
+
+.intro {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-attachment: scroll;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro { background-image: url(img/wyb7qIwSPZ-600.jpeg);} @media (min-width: 600px) { .intro {background-image: url(img/wyb7qIwSPZ-800.jpeg);}}@media (min-width: 800px) { .intro {background-image: url(img/wyb7qIwSPZ-900.jpeg);}}@media (min-width: 900px) { .intro {background-image: url(img/wyb7qIwSPZ-1100.jpeg);}}@media (min-width: 1100px) { .intro {background-image: url(img/wyb7qIwSPZ-1500.jpeg);}}@media (min-width: 1500px) { .intro {background-image: url(img/wyb7qIwSPZ-2000.jpeg);}}
+
+.avatar {
+  overflow: hidden;
+  border-radius: 16px
+}
+
+.avatar figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  backdrop-filter: blur(3px);
+  padding: 32px;
+}
+
+.avatar figcaption {
+  font-size: 1.3rem;
+  font-family: var(--font-header);
+}
+
+.avatar img {
+  border-radius: 50%;
+  border: 6px solid white;
+  width: 200px;
+  height: 200px
+}
+
+section {
+  margin: 32px auto;
+  max-width: 800px;
+}
+
+h1 {
+  text-align: center;
+  padding: 32px 0;
+  font-size: 3rem;
+  font-family: var(--font-header);
+}
+
+p {
+  margin: 24px 0;
+}
+    </style>
   </head>
   <body>
-    <picture><source type="image/avif" srcset="img/CIP3iRpG9p-300.avif 300w, img/CIP3iRpG9p-600.avif 600w, img/CIP3iRpG9p-1280.avif 1280w, img/CIP3iRpG9p-1816.avif 1816w" sizes="(min-width: 30em) 50vw, 100vw"><source type="image/jpeg" srcset="img/CIP3iRpG9p-300.jpeg 300w, img/CIP3iRpG9p-600.jpeg 600w, img/CIP3iRpG9p-1280.jpeg 1280w, img/CIP3iRpG9p-1816.jpeg 1816w" sizes="(min-width: 30em) 50vw, 100vw"><img alt="abstract background" loading="lazy" decoding="async" src="img/CIP3iRpG9p-300.jpeg" width="1816" height="1021"></picture>
-    <h1>About</h1>
+    <header class="intro">
+      <div class="avatar">
+        <figure>
+          <picture><source type="image/avif" srcset="img/Fsu9sRhGu8-300.avif 300w" sizes="(min-width: 30em) 50vw, 100vw"><img alt="Dmitry Gladkikh" loading="lazy" decoding="async" class="" src="img/Fsu9sRhGu8-300.jpeg" width="300" height="299"></picture>
+          <figcaption>Dmitry Gladkikh</figcaption>
+        </figure>
+      </div>
+    </header>
+    <section>
+<h1>About</h1>
 <p>I am an experienced front-end developer who enjoys building modern UI using the latest in web technologies. I frequently leverage the React and Redux ecosystems (@redux-toolkit). I love styled-components, xstyled, tailwindcss.</p>
 <p>Currently, I work at Kaspersky Lab on the Infrastructure Solutions &amp; Services Development team.</p>
-
+</section>
   </body>
 </html>
