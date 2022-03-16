@@ -1,6 +1,7 @@
 ---
-title: Dmitry Gladkikh - Front-End Developer
+title: Dmitry Gladkikh - Front-end Developer
 name: Dmitry Gladkikh
+job_title: Front-end Developer
 ---
 
 <!doctype html>
@@ -18,8 +19,11 @@ name: Dmitry Gladkikh
     <header class="intro">
       <div class="avatar">
         <figure>
-          {% image "images/avatar.jpg", "", "Dmitry Gladkikh", "(min-width: 30em) 50vw, 100vw" %}
-          <figcaption>{{ name }}</figcaption>
+          {% image "images/avatar.jpg", "", "avatar", "(min-width: 30em) 50vw, 100vw" %}
+          <figcaption>
+            <div>{{ name }}</div>
+            <div class="job_title">{{ job_title }}</div>
+          </figcaption>
         </figure>
       </div>
     </header>
