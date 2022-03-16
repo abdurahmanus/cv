@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Ubuntu&display=swap');
+
+:root {
+  --font-header: 'Fredoka', sans-serif;
+  --font-body: "Ubuntu", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: hsl(233deg 85% 4%);
+  color: hsl(0, 0%, 94%);
+  font-size: 16px;
+}
+
+.intro {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-attachment: scroll;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+{% cssBackground "images/bg.jpg", ".intro", [600, 800, 900, 1100, 1500, 2000] %}
+
+.avatar {
+  overflow: hidden;
+  border-radius: 16px
+}
+
+.avatar figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  backdrop-filter: blur(3px);
+  padding: 32px;
+}
+
+.avatar figcaption {
+  font-size: 1.3rem;
+  font-family: var(--font-header);
+}
+
+.avatar img {
+  border-radius: 50%;
+  border: 6px solid white;
+  width: 200px;
+  height: 200px
+}
+
+section {
+  margin: 32px auto;
+  max-width: 800px;
+}
+
+h1 {
+  text-align: center;
+  padding: 32px 0;
+  font-size: 3rem;
+  font-family: var(--font-header);
+}
+
+p {
+  margin: 24px 0;
+}

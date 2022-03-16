@@ -1,5 +1,6 @@
 ---
 title: Dmitry Gladkikh - Front-End Developer
+name: Dmitry Gladkikh
 ---
 
 <!doctype html>
@@ -8,13 +9,20 @@ title: Dmitry Gladkikh - Front-End Developer
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
+    {% set css %}
+      {% include "css/index.css" %}
+    {% endset %}
+    <style>{{ css | safe }}</style>
   </head>
   <body>
-    {% image "./src/images/1155017.jpg", "abstract background", "(min-width: 30em) 50vw, 100vw" %}
+    <header class="intro">
+      <div class="avatar">
+        <figure>
+          {% image "images/avatar.jpg", "", "Dmitry Gladkikh", "(min-width: 30em) 50vw, 100vw" %}
+          <figcaption>{{ name }}</figcaption>
+        </figure>
+      </div>
+    </header>
     {{ content | safe }}
   </body>
 </html>
