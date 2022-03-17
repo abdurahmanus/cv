@@ -1,0 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(233deg 85% 4%);
+  margin: 0;
+}
