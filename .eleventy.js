@@ -58,6 +58,7 @@ function imageCssBackground(src, selector, widths) {
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+  eleventyConfig.addLiquidShortcode("image", imageShortcode);
   eleventyConfig.addNunjucksShortcode("cssBackground", imageCssBackground);
   eleventyConfig.addPassthroughCopy("src/css");
   return {
