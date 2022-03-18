@@ -71,6 +71,8 @@ const Figure = styled.figure`
   background-color: hsla(259.3, 70%, 7.8%, 0.94);
   padding: 32px;
   margin: 0;
+  position: relative;
+  z-index: 0;
 
   @supports (backdrop-filter: blur(0px)) {
     & {
