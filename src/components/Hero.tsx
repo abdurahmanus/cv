@@ -37,11 +37,11 @@ export const Hero: React.FC<HeroProps> = ({ style }) => {
         <Figure>
           <AvatarWrapper>
             <StaticImage src="../images/avatar.jpg" alt="Avatar" placeholder="blurred" width={200} height={200} />
-            <Figcaption>
-              <div>Dmitry Gladkikh</div>
-              <JobTitle>Front-end Developer</JobTitle>
-            </Figcaption>
           </AvatarWrapper>
+          <Figcaption>
+            <div>Dmitry Gladkikh</div>
+            <JobTitle>Front-end Developer</JobTitle>
+          </Figcaption>
         </Figure>
       </AvatarBlock>
     </BgImageWrapper>
@@ -54,7 +54,7 @@ const BgImageWrapper = styled(BackgroundImage)`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: calc(var(--menu-height) * -1)
+  margin-top: calc(var(--menu-height) * -1);
 `;
 
 const AvatarBlock = styled.div`
@@ -86,6 +86,8 @@ const AvatarWrapper = styled.div`
     border: 6px solid white;
     width: 200px;
     height: 200px;
+    position: relative;
+    z-index: 0;
   }
 `;
 
