@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     --font-header: "Fredoka", sans-serif;
     --font-body: "Ubuntu", sans-serif;
     --body-padding: 32px;
+    --menu-height: 40px;
     --header-color: hsl(326deg 38% 50%);
     --accent-color: hsl(213deg 68% 57%);
     --accent-alt-color: hsl(95deg 81% 47%);

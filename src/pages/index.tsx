@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from 'react-helmet'
+import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 import { Layout } from "../components/Layout";
@@ -11,6 +11,9 @@ const IndexPage = () => {
     <Layout>
       <main>
         <Helmet title="Dmitry Gladkikh - Front-end Developer" defer={false} />
+        <Menu>
+          <ExternalLink href="cv.pdf">🧾 Resume</ExternalLink>
+        </Menu>
         <Hero />
         <Section>
           <SectionHeader>About</SectionHeader>
@@ -112,6 +115,19 @@ const IndexPage = () => {
   );
 };
 
+const Menu = styled.header`
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 16px;
+  height: var(--menu-height);
+  background: #2b2e3f3b;
+  margin: 0 calc(var(--body-padding) * -1);
+  z-index: 1
+`;
+
 const Section = styled.section`
   margin: 32px auto;
   max-width: 800px;
@@ -138,6 +154,9 @@ const ExternalLink = styled.a.attrs((props) => ({
 }))`
   color: var(--accent-color);
   text-decoration: none;
+  &:hover {
+    color: var(--accent-alt-color);
+  }
 `;
 
 const CareerPath = styled.div`

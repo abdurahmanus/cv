@@ -5,17 +5,17 @@ import { getImage, StaticImage } from "gatsby-plugin-image";
 import { convertToBgImage } from "gbimage-bridge";
 import BackgroundImage from "gatsby-background-image";
 
-export const Hero = () => {
+interface HeroProps {
+  style?: React.CSSProperties;
+}
+
+export const Hero: React.FC<HeroProps> = ({ style }) => {
   const { placeholderImage } = useStaticQuery(
     graphql`
       query {
         placeholderImage: file(relativePath: { eq: "bg.jpg" }) {
           childImageSharp {
-            gatsbyImageData(
-              layout: FULL_WIDTH
-              placeholder: BLURRED
-              formats: [AUTO, WEBP, AVIF]
-            )
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
           }
         }
       }
@@ -36,13 +36,7 @@ export const Hero = () => {
       <AvatarBlock>
         <Figure>
           <AvatarWrapper>
-            <StaticImage
-              src="../images/avatar.jpg"
-              alt="Avatar"
-              placeholder="blurred"
-              width={200}
-              height={200}
-            />
+            <StaticImage src="../images/avatar.jpg" alt="Avatar" placeholder="blurred" width={200} height={200} />
             <Figcaption>
               <div>Dmitry Gladkikh</div>
               <JobTitle>Front-end Developer</JobTitle>
@@ -60,6 +54,7 @@ const BgImageWrapper = styled(BackgroundImage)`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: calc(var(--menu-height) * -1)
 `;
 
 const AvatarBlock = styled.div`
