@@ -193,6 +193,8 @@ const CompanyLogoWrapper = styled.div`
     border: 6px solid white;
     border-radius: 50%;
     background: white;
+    position: relative;
+    z-index: 0;
   }
 `;
 
