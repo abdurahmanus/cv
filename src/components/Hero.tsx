@@ -33,17 +33,15 @@ export const Hero: React.FC<HeroProps> = ({ style }) => {
       {...bgImage}
       preserveStackingContext
     >
-      <AvatarBlock>
-        <Figure>
-          <AvatarWrapper>
-            <StaticImage src="../images/avatar.jpg" alt="Avatar" placeholder="blurred" width={200} height={200} />
-          </AvatarWrapper>
-          <Figcaption>
-            <div>Dmitry Gladkikh</div>
-            <JobTitle>Front-end Developer</JobTitle>
-          </Figcaption>
-        </Figure>
-      </AvatarBlock>
+      <Figure>
+        <AvatarWrapper>
+          <StaticImage src="../images/avatar.jpg" alt="Avatar" placeholder="blurred" width={200} height={200} />
+        </AvatarWrapper>
+        <Figcaption>
+          <div>Dmitry Gladkikh</div>
+          <JobTitle>Front-end Developer</JobTitle>
+        </Figcaption>
+      </Figure>
     </BgImageWrapper>
   );
 };
@@ -57,22 +55,16 @@ const BgImageWrapper = styled(BackgroundImage)`
   margin-top: calc(var(--menu-height) * -1);
 `;
 
-const AvatarBlock = styled.div`
-  overflow: hidden;
-  border-radius: 24px;
-  border: 1px dashed hsl(0deg 0% 100% / 20%);
-`;
-
 const Figure = styled.figure`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
   background-color: hsla(259.3, 70%, 7.8%, 0.94);
+  border-radius: 24px;
+  border: 1px dashed hsl(0deg 0% 100% / 20%);
   padding: 32px;
   margin: 0;
-  position: relative;
-  z-index: 0;
 
   @supports (backdrop-filter: blur(0px)) {
     & {
