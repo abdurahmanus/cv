@@ -1,5 +1,1 @@
-# Header
-
-Paragraph 1
-
-Paragraph 2
+# Dmitrii Gladkikh - Senior Software Developer
