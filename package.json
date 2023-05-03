@@ -1,0 +1,17 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf ./build && make-dir ./build && marked -i ./src/cv.md -o ./build/cv.html"
+  },
+  "keywords": [],
+  "author": "abdurahmanus",
+  "license": "ISC",
+  "devDependencies": {
+    "make-dir-cli": "^3.0.0",
+    "marked": "^5.0.0",
+    "rimraf": "^5.0.0"
+  }
+}
