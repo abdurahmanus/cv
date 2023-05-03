@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf ./build && make-dir ./build && marked -i ./src/cv.md -o ./build/cv.html"
+    "build": "rimraf ./build && make-dir ./build && marked -i ./src/cv.md -o ./build/index.html"
   },
   "keywords": [],
   "author": "abdurahmanus",
