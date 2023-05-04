@@ -11,3 +11,9 @@ const result = template.replace("{placeholder}", html);
 await makeDir("build");
 
 await fs.writeFile("./build/index.html", result, "utf-8");
+
+const svgs = (await fs.readdir("./public")).filter((fn) => fn.endsWith(".svg"));
+
+svgs.forEach(async (svg) => {
+  await fs.copyFile(`./public/${svg}`, `./build/${svg}`);
+});
