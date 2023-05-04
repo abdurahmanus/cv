@@ -4,10 +4,10 @@ I am an experienced front-end developer who enjoys building modern UI using the 
 
 ## Contacts
 
-☎️ +421 950 352 215
+![Mobile phone icon](./assets/mobile.svg) +421 950 352 215
 
-✉️ abdurahmanus@gmail.com
+![Email icon](./assets/email.svg) abdurahmanus@gmail.com
 
-![LinkedIn icon](./linkedin.svg) https://www.linkedin.com/in/dmitry-gladkikh-41a10077
+![LinkedIn icon](./assets/linkedin.svg) https://www.linkedin.com/in/dmitry-gladkikh-41a10077
 
-![GitHub icon](./github.svg) https://github.com/abdurahmanus
+![GitHub icon](./assets/github.svg) https://github.com/abdurahmanus

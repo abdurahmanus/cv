@@ -12,8 +12,11 @@ await makeDir("build");
 
 await fs.writeFile("./build/index.html", result, "utf-8");
 
-const svgs = (await fs.readdir("./public")).filter((fn) => fn.endsWith(".svg"));
+// copy assets
+await makeDir("build/assets");
 
-svgs.forEach(async (svg) => {
-  await fs.copyFile(`./public/${svg}`, `./build/${svg}`);
+const assets = await fs.readdir("./public/assets");
+
+assets.forEach(async (asset) => {
+  await fs.copyFile(`./public/assets/${asset}`, `./build/assets/${asset}`);
 });
