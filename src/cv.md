@@ -8,4 +8,6 @@ I am an experienced front-end developer who enjoys building modern UI using the 
 
 ✉️ abdurahmanus@gmail.com
 
-![LinkedIn icon](../public/linkedin.svg) https://www.linkedin.com/in/dmitry-gladkikh-41a10077
+![LinkedIn icon](./linkedin.svg) https://www.linkedin.com/in/dmitry-gladkikh-41a10077
+
+![GitHub icon](./github.svg) https://github.com/abdurahmanus
