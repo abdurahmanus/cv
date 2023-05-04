@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf ./build && node ./build.mjs"
+    "build": "rimraf ./build && node ./build.mjs",
+    "dev": "npx serve build"
   },
   "keywords": [],
   "author": "abdurahmanus",
